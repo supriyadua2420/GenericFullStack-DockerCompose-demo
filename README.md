@@ -1,0 +1,1 @@
+# GenericFullStack-DockerCompose-demo
