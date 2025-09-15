@@ -15,7 +15,8 @@ const port = process.env.MONGO_PORT;
 const dbName = process.env.MONGO_DB;
 
 const mongoUrl = `mongodb://${username}:${password}@${host}:${port}`;
-const client = new MongoClient(mongoUrl);
+const mongoUrlDocker = "mongodb://admin:password@mongodb";
+const client = new MongoClient(mongoUrlDocker);
 
 // Serve index.html
 app.get('/', function (req, res) {
@@ -60,6 +61,7 @@ app.post('/update-profile', async function (req, res) {
   }
 });
 
-app.listen(3000, function () {
-  console.log("🚀 App listening on http://localhost:3000");
+app.listen(3000, "0.0.0.0", () => {
+  console.log("🚀 App listening on port 3000");
 });
+
