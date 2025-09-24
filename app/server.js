@@ -12,6 +12,14 @@ app.use(bodyParser.json());
 const uri = process.env.MONGO_URL;
 const client = new MongoClient(uri);
 
+const cors = require('cors');
+
+// allow frontend to call backend
+app.use(cors({
+  origin: "*", // you can restrict to your domain instead of "*"
+}));
+
+
 async function main() {
   try {
     // Connect once at startup
