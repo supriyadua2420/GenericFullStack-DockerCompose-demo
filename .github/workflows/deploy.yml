@@ -3,7 +3,7 @@ name: Deploy to Cloud Run
 on:
   push:
     branches:
-      - main
+      - "*"
 
 env:
   PROJECT_ID: my-app-472209
