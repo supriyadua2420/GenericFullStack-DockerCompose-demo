@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "*"
+  workflow_dispatch:
 
 env:
   PROJECT_ID: my-app-472209
