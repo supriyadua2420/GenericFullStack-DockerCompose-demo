@@ -15,6 +15,7 @@ const client = new MongoClient(uri);
 const cors = require('cors');
 
 // allow frontend to call backend
+//change
 app.use(cors({
   origin: "*", // you can restrict to your domain instead of "*"
 }));
