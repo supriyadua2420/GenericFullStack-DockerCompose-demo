@@ -1,10 +1,8 @@
 name: Deploy to Cloud Run
 
 on:
-  push:
-    branches:
-      - "*"
-  workflow_dispatch:
+  push:          # runs on any push to any branch
+  workflow_dispatch:  # allows manual run
 
 env:
   PROJECT_ID: my-app-472209
